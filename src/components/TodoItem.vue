@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<div @click="handleDelClick">
+		<div @click="handleDelClick" class="todo-item">
+			<span class="active"></span>
 			值 : {{ item }}&nbsp;&nbsp;&nbsp;序号 : {{ index }}
 		</div>
 	</div>
@@ -23,5 +24,18 @@ export default {
 </script>
 
 <style scoped>
+	.todo-item{
+		cursor: pointer;
+	}
+	span{
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+		border:1px solid red;
+		border-radius: 50%;
 
+	}
+	.active{
+		background-color: red;
+	}
 </style>
